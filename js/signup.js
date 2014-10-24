@@ -26,9 +26,13 @@ function onReady() {
     }
 
     signupForm.addEventListener('change', function(){
-    	var occupationOther = document.getElementsByName('occupationOther');
-    	occupationOther.style.display = 'block';
-
+    	var occupation = document.getElementById('occupation').value;
+		
+		if(occupation == 'other'){
+			var occupationOther = document.getElementsByClassName('form-control');
+			console.log(occupationOther.style.display);
+		}
+		
     });
 
 
